@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgxv4ifpfdtkk"]
+
+[ext_resource type="Texture2D" uid="uid://dh2qi0rc3hemd" path="res://essaie jeu/assets/items/yarn.png" id="1_up6d4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5bj2p"]
+radius = 44.0454
+
+[node name="yarn" type="RigidBody2D"]
+
+[node name="yarn" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_up6d4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
+shape = SubResource("CircleShape2D_5bj2p")

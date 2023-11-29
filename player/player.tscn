@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbo24wou702sk"]
+
+[ext_resource type="Script" path="res://essaie jeu/player/player.gd" id="1_7pej3"]
+[ext_resource type="Texture2D" uid="uid://mwk7tw3ta4fw" path="res://essaie jeu/assets/cat/funnijumpcat.png" id="2_jgdi0"]
+[ext_resource type="Texture2D" uid="uid://bw6p32rydbrvq" path="res://essaie jeu/assets/cat/funnicat.png" id="2_wh3l7"]
+[ext_resource type="Texture2D" uid="uid://bhve7fm88adj3" path="res://essaie jeu/assets/cat/walkingcat.png" id="3_x8srx"]
+[ext_resource type="Texture2D" uid="uid://bx52w5wjkyc6q" path="res://essaie jeu/assets/cat/catonfeet.png" id="5_s4l6m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkohm"]
+radius = 31.0
+height = 130.0
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_7pej3")
+img_jump = ExtResource("2_jgdi0")
+img_walk = ExtResource("3_x8srx")
+img_sit = ExtResource("2_wh3l7")
+img_stand = ExtResource("5_s4l6m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(53, 0)
+scale = Vector2(0.335478, 0.339322)
+texture = ExtResource("2_wh3l7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fkohm")
+debug_color = Color(0.396078, 0.607843, 0, 1)
